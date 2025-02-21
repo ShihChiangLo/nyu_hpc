@@ -78,4 +78,20 @@ ssh NYUNetID@greene.hpc.nyu.edu
 ```
 You should be logged in without typing password
 
+## Create your own conda environment on HPC
+### 1. log in your account
+### 2. module load anaconda3/2024.02 (you can check and select one available version)
+### 3. Create the environment
+### 4. Run init command: conda init bash
+### 5. Reload shell configuration: source ~/.bashrc
+### 6. Activate the enviroment: conda activate your_environment
+### 7. Install the package you need
+## Use your enviroment with Open OnDemand
+### 1. install Pysqlite3 and Ipykernel in your environment
+https://anaconda.org/conda-forge/pysqlite3
+
+https://anaconda.org/anaconda/ipykernel
+### 2. regist the name of your environment so you can see it in the kernel options: 
+python -m ipykernel install --user --name your_environment --display-name "Name_you_want_to_display"
+### 3. start a jupyter notebook on Open OnDemand and you can find your environment in the kernel options
 
